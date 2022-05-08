@@ -1,0 +1,54 @@
+"Find the squares of a sorted array
+https://www.geeksforgeeks.org/sort-array-converting-elements-squares/
+
+---->>>   package May_04;
+
+import java.util.Arrays;
+
+public class sortArrayAfterSquare_01 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int arr[] = { -6, -3, -1, 2, 4, 5 };
+
+		int squre = 0;
+		for (int i = 0; i < arr.length; i++) {
+			arr[i] = arr[i] * arr[i];
+		}
+
+		Arrays.sort(arr);
+		System.out.println(Arrays.toString(arr));
+
+	}
+
+}
+
+
+Sum of Unique elements
+https://leetcode.com/problems/sum-of-unique-elements/"
+
+package May_04;
+
+public class Sum_unique_numbers_02 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		int[] arr = { 1, 2,3,2 };
+
+		int[] counts = new int[101];
+
+		for (int n : arr) {
+			counts[n]++;
+		}
+		int sum = 0;
+		for (int i = 0; i < 101; i++) {
+			if (counts[i] == 1) {
+				sum += i;
+			}
+		}
+
+		System.out.println(sum);
+	}
+
+}
